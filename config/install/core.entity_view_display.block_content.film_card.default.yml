@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.film_card
+    - field.field.block_content.film_card.field_film_card_image
+    - field.field.block_content.film_card.field_film_card_link
+    - field.field.block_content.film_card.field_film_card_title
+    - image.style.breakpoint_sm_2x
+  module:
+    - ds
+    - field_formatter_class
+    - image
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_film_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_film_card_image
+      title:
+        - field_film_card_title
+      link:
+        - field_film_card_link
+id: block_content.film_card.default
+targetEntityType: block_content
+bundle: film_card
+mode: default
+content:
+  field_film_card_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: breakpoint_sm_2x
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: image
+    region: image
+  field_film_card_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: link_separate
+    region: link
+  field_film_card_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

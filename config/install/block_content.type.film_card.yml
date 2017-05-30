@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: film_card
+label: 'Film Card'
+revision: 0
+description: 'An example film card block'

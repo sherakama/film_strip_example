@@ -1,0 +1,16 @@
+name: 'Film Strip Example'
+description: 'Film strip examples'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - ds
+  - field
+  - field_formatter_class
+  - filefield_paths
+  - image
+  - link
+  - stanford_image_styles
+  - ui_patterns_views
+  - views
+version: 8.x-1.0
